@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
     <title>Xss </title>
+    <script>windows.opener.location.replace("http://www.example.com");</script>
 </head>
 <body >
-    <script>
+<!--     <script>
         alert(document.domain);
         alert('xss');
     </script>
 
     <div class="copyrightfooter">
         <img src=x onerror=alert(document.domain)></img>
-
+ -->
+    
+    <script>alert("This is windowss opener property bug.Check the parent tab.it should be replaced ");</script>
+    check your old tab
 </body>
 </html>
